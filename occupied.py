@@ -10,7 +10,7 @@ def occupied(parking_spaces, y, t):
     print(number_of_spots_that_remained_occupied)
 occupied(8,"CCCCC...", "C.C.C.C.")
 """
-
+"""
 language = ""
 lines_to_be_expected = input("How many lines of text are you going to input?: ")
 language_sample_text = input("Put your text here if you want its language to be determined: ")
@@ -29,3 +29,29 @@ def eng_or_fren_determiner():
         language = "English"
     print(language)
 eng_or_fren_determiner()
+"""
+
+def HONI_block_counter(x):
+    HONI_block_count = 0
+    H_count = 0
+    O_count = 0
+    N_count = 0
+    I_count = 0
+    y = x.upper()
+    z = list(y)
+    for letter in y:
+        if letter == "H":
+            H_count += 1
+        if H_count > O_count:
+            if letter == "O":
+                O_count += 1
+        if O_count > N_count:
+            if letter == "N":
+                N_count += 1
+        if N_count > I_count:
+            if letter == "I":
+                I_count += 1
+    if H_count and O_count and N_count and I_count >= 1:
+        HONI_block_count += 1
+    print(HONI_block_count)
+HONI_block_counter("HHHHHHHHHHOOOOOOONNNNNNNIIIIIIII")
