@@ -51,7 +51,8 @@ def HONI_block_counter(x):
         if N_count > I_count:
             if letter == "I":
                 I_count += 1
-    if H_count and O_count and N_count and I_count >= 1:
-        HONI_block_count += 1
+        if H_count >= 1 and O_count >= 1 and N_count >= 1 and I_count >= 1:
+            HONI_block_count += 1
+            H_count = O_count = N_count = I_count = 0
     print(HONI_block_count)
-HONI_block_counter("HHHHHHHHHHOOOOOOONNNNNNNIIIIIIII")
+HONI_block_counter("PROHODNIHODNIK")
